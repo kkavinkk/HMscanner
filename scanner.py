@@ -9,6 +9,25 @@ basic document scanner:
 
 # PART 1
 #Load image
+image = cv2.imread('TestImage.jpg')
+
+"""
+OPENS ORIGINAL IMAGE
+cv2.namedWindow('Original', cv2.WINDOW_NORMAL)  # Allow manual resizing
+cv2.resizeWindow('Original', 800, 1100)  
+cv2.imshow('Original', image)
+cv2.waitKey(0)
+"""
+
+grayscale_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+cv2.namedWindow('Grayscale', cv2.WINDOW_NORMAL)
+cv2.resizeWindow('Grayscale', 800, 1100)
+cv2.imshow('Grayscale', grayscale_image)
+cv2.waitKey(0)
+
+cv2.destroyAllWindows()
+
 #convert image to grayscale to simplify edge detection and other operations
 #Use algorithim to identify sharp changes in intesity, whcih typically correspond to edges of the doc
 
