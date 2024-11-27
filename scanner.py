@@ -9,10 +9,12 @@ basic document scanner:
 
 # PART 1
 #Load image
+#convert image to grayscale to simplify edge detection and other operations
+#Use algorithim to identify sharp changes in intesity, whcih typically correspond to edges of the doc
 image = cv2.imread('TestImage.jpg')
 
 """
-OPENS ORIGINAL IMAGE
+OPENS ORIGINAL IMAGE55
 cv2.namedWindow('Original', cv2.WINDOW_NORMAL)  # Allow manual resizing
 cv2.resizeWindow('Original', 800, 1100)  
 cv2.imshow('Original', image)
@@ -28,8 +30,6 @@ cv2.waitKey(0)
 
 cv2.destroyAllWindows()
 
-#convert image to grayscale to simplify edge detection and other operations
-#Use algorithim to identify sharp changes in intesity, whcih typically correspond to edges of the doc
 
 #PART 2
 #Locate contours(the outlines of the object), find all the coutnours of the image
