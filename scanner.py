@@ -31,6 +31,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 
+
 #PART 2
 #Locate contours(the outlines of the object), find all the coutnours of the image
 #Use geometry to isolat the quadrilateral that represents the document
